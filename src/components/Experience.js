@@ -103,16 +103,16 @@ const Experience = () => {
     visible: {
       opacity: 1,
       transition: {
-        delayChildren: 0.3,
-        staggerChildren: 0.2
+        delayChildren: 0.1,
+        staggerChildren: 0.1
       }
     }
   };
 
   const itemVariants = {
-    hidden: { x: -50, opacity: 0 },
+    hidden: { y: 30, opacity: 0 },
     visible: {
-      x: 0,
+      y: 0,
       opacity: 1,
       transition: {
         duration: 0.5
@@ -127,7 +127,7 @@ const Experience = () => {
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
+          viewport={{ once: true, amount: 0.1 }}
         >
           {/* Section Header */}
           <motion.div variants={itemVariants} className="text-center mb-16">
