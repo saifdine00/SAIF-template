@@ -58,6 +58,19 @@ const Hero = () => {
     }
   };
 
+  const photoVariants = {
+    hidden: { scale: 0, opacity: 0 },
+    visible: {
+      scale: 1,
+      opacity: 1,
+      transition: {
+        duration: 0.8,
+        ease: "easeOut",
+        delay: 0.3
+      }
+    }
+  };
+
   return (
     <section 
       id="home" 
@@ -120,10 +133,10 @@ const Hero = () => {
           variants={containerVariants}
           initial="hidden"
           animate="visible"
-          className="text-center max-w-4xl mx-auto"
+          className="text-center max-w-5xl mx-auto"
         >
           {/* Greeting */}
-          <motion.div variants={itemVariants} className="mb-6">
+          <motion.div variants={itemVariants} className="mb-8">
             <motion.span 
               className="inline-block px-6 py-3 bg-white/80 dark:bg-dark-800/80 backdrop-blur-sm text-primary-600 dark:text-primary-400 rounded-full text-sm font-medium shadow-lg border border-primary-200 dark:border-primary-800"
               whileHover={{ scale: 1.05, y: -2 }}
@@ -135,33 +148,85 @@ const Hero = () => {
             </motion.span>
           </motion.div>
 
-          {/* Name with simplified gradient animation */}
-          <motion.h1
-            variants={itemVariants}
-            className="text-5xl md:text-7xl font-bold text-gray-900 dark:text-white mb-6"
-          >
-            <motion.span 
-              className="bg-gradient-to-r from-primary-600 via-purple-600 to-primary-600 bg-clip-text text-transparent"
+          {/* Main Content with Photo and Name */}
+          <div className="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-12 mb-8">
+            {/* Professional Photo */}
+            <motion.div
+              variants={photoVariants}
+              className="relative"
             >
-              Saif Eddine
-            </motion.span>
-            <br />
-            <motion.span
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.6, duration: 0.6 }}
-            >
-              Fatnassi
-            </motion.span>
-          </motion.h1>
+              <motion.div
+                className="relative w-48 h-48 md:w-56 md:h-56 lg:w-64 lg:h-64"
+                whileHover={{ scale: 1.05 }}
+                transition={{ duration: 0.3 }}
+              >
+                {/* Static Gradient Border */}
+                <div className="absolute inset-0 rounded-full bg-gradient-to-r from-primary-500 via-purple-500 to-primary-500 p-1">
+                  <div className="w-full h-full rounded-full bg-white dark:bg-dark-800 p-2">
+                    <img
+                      src="/profile.jpeg"
+                      alt="Saif Eddine Fatnassi - Full-Stack Developer"
+                      className="w-full h-full rounded-full object-cover shadow-2xl"
+                      onError={(e) => {
+                        // Fallback if image doesn't exist
+                        e.target.style.display = 'none';
+                        e.target.nextSibling.style.display = 'flex';
+                      }}
+                    />
+                    {/* Fallback Avatar */}
+                    <div className="w-full h-full rounded-full bg-gradient-to-br from-primary-500 to-purple-600 flex items-center justify-center text-white text-4xl md:text-5xl font-bold shadow-2xl hidden">
+                      SF
+                    </div>
+                  </div>
+                </div>
+                
+                {/* Floating Elements */}
+                <motion.div
+                  className="absolute -top-2 -right-2 w-6 h-6 bg-green-500 rounded-full border-4 border-white dark:border-dark-800 shadow-lg"
+                  animate={{
+                    scale: [1, 1.2, 1],
+                  }}
+                  transition={{
+                    duration: 2,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                  }}
+                  title="Available for work"
+                />
+              </motion.div>
+            </motion.div>
 
-          {/* Title */}
-          <motion.h2
-            variants={itemVariants}
-            className="text-2xl md:text-3xl text-gray-600 dark:text-gray-300 mb-8 font-light"
-          >
-            Full-Stack Developer
-          </motion.h2>
+            {/* Name and Title */}
+            <div className="text-center lg:text-left">
+              {/* Name with simplified gradient animation */}
+              <motion.h1
+                variants={itemVariants}
+                className="text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 dark:text-white mb-4"
+              >
+                <motion.span 
+                  className="bg-gradient-to-r from-primary-600 via-purple-600 to-primary-600 bg-clip-text text-transparent"
+                >
+                  Saif Eddine
+                </motion.span>
+                <br />
+                <motion.span
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.6, duration: 0.6 }}
+                >
+                  Fatnassi
+                </motion.span>
+              </motion.h1>
+
+              {/* Title */}
+              <motion.h2
+                variants={itemVariants}
+                className="text-xl md:text-2xl lg:text-3xl text-gray-600 dark:text-gray-300 font-light"
+              >
+                Full-Stack Developer
+              </motion.h2>
+            </div>
+          </div>
 
           {/* Description */}
           <motion.p
