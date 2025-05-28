@@ -141,7 +141,7 @@ const Skills = () => {
           </div>
 
           {/* Additional Skills */}
-          <motion.div variants={itemVariants} className="mt-16 text-center">
+          <motion.div variants={itemVariants} className="mt-8 text-center">
             <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-8">
               Additional Expertise
             </h3>
