@@ -1,16 +1,32 @@
 {
   "short_name": "Saif Portfolio",
-  "name": "Saif Eddine Fatnassi - Portfolio",
+  "name": "Saif Eddine Fatnassi - Full-Stack Developer Portfolio",
+  "description": "Portfolio website of Saif Eddine Fatnassi, a passionate Full-Stack Developer specializing in React, Vue.js, Node.js, and NestJS",
   "icons": [
     {
       "src": "favicon.ico",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
+    },
+    {
+      "src": "logo192.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "logo512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any maskable"
     }
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#3b82f6",
+  "theme_color": "#3B82F6",
   "background_color": "#ffffff",
-  "description": "Full-Stack Developer Portfolio - Saif Eddine Fatnassi"
+  "orientation": "portrait-primary",
+  "categories": ["portfolio", "developer", "technology"],
+  "lang": "en",
+  "dir": "ltr"
 } 
