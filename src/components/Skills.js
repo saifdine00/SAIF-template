@@ -4,7 +4,7 @@ import {
   SiReact, SiVuedotjs, SiJavascript, SiTypescript, SiNodedotjs, 
   SiNestjs, SiPython, SiCplusplus, SiHtml5, SiCss3,
   SiTailwindcss, SiBootstrap, SiMongodb, SiPostgresql, SiMysql,
-  SiDocker, SiGit, SiLinux, SiAndroidstudio, SiPhp, SiSymfony
+  SiDocker, SiGit, SiLinux, SiAndroidstudio, SiPhp, SiSymfony, SiNextdotjs
 } from 'react-icons/si';
 import { FaDatabase, FaCode } from 'react-icons/fa';
 
@@ -37,7 +37,7 @@ const Skills = () => {
         { name: "C++", icon: SiCplusplus, color: "#00599C" },
         { name: "PHP", icon: SiPhp, color: "#777BB4" },
         { name: "Symfony", icon: SiSymfony, color: "#000000" },
-      ]
+        { name: "NextJS", icon: SiNextdotjs, color: "#0070f3" }      ]
     },
     {
       title: "Database & Tools",
