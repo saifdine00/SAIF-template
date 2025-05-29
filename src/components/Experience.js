@@ -10,7 +10,7 @@ const Experience = () => {
       company: 'TeraToSoft | Waha Oil Company',
       location: 'Tunisia',
       period: 'Aug. 2024 – Present',
-      description: 'Leading full-stack development initiatives with modern web technologies.',
+      description: 'Employee Portal – Full-Stack Development Lead.',
       highlights: [
         'Implemented role-based navigation and permission system for different user types',
         'Built responsive Vue.js 3 application with Vuetify UI framework and bilingual support (Arabic/English)',
@@ -92,10 +92,25 @@ const Experience = () => {
   ];
 
   const allItems = [...experiences, ...education].sort((a, b) => {
-    // Sort by start year (descending)
-    const yearA = parseInt(a.period.split(' ').pop());
-    const yearB = parseInt(b.period.split(' ').pop());
-    return yearB - yearA;
+    // Extract start year from period (e.g., "2021 - 2024" -> 2021, "Jul. 2023 – Sep. 2023" -> 2023)
+    const getStartYear = (period) => {
+      const match = period.match(/(\d{4})/);
+      return match ? parseInt(match[1]) : 0;
+    };
+    
+    const yearA = getStartYear(a.period);
+    const yearB = getStartYear(b.period);
+    
+    // Sort by start year (descending - most recent first)
+    if (yearA !== yearB) {
+      return yearB - yearA;
+    }
+    
+    // If same year, prioritize work experience over education
+    if (a.type === 'work' && b.type === 'education') return -1;
+    if (a.type === 'education' && b.type === 'work') return 1;
+    
+    return 0;
   });
 
   const containerVariants = {
