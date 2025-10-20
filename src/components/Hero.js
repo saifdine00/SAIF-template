@@ -164,7 +164,7 @@ const Hero = () => {
                 <div className="absolute inset-0 rounded-full bg-gradient-to-r from-primary-500 via-purple-500 to-primary-500 p-1">
                   <div className="w-full h-full rounded-full bg-white dark:bg-dark-800 p-2">
                     <img
-                      src="/profile.jpeg"
+                      src="/linkedin-photo.jpg"
                       alt="Saif Eddine Fatnassi - Full-Stack Developer"
                       className="w-full h-full rounded-full object-cover shadow-2xl"
                       onError={(e) => {
@@ -265,7 +265,7 @@ const Hero = () => {
               variants={magneticVariants}
               whileHover="hover"
               whileTap="tap"
-              href="/resume.pdf"
+              href="/saif_Eddine_Fatnassi_CV_fr.pdf"
               download
               className="btn-secondary flex items-center justify-center gap-2 relative overflow-hidden group"
               data-cursor="hover"
