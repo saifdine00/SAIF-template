@@ -6,10 +6,26 @@ const Experience = () => {
   const experiences = [
     {
       type: 'work',
+      title: 'Full-Stack Developer | ERP Project',
+      company: 'Digital4all',
+      location: 'Tunis, Tunisia',
+      period: 'Nov. 2025 – Apr. 2026',
+      description: 'Development and supervision of a complete ERP web application (Next.js/NestJS/TypeScript) as technical lead, significantly improving fleet management, dispatch, CRM, and recovery.',
+      highlights: [
+        'Implemented full-stack architecture: responsive dashboard and mobile interfaces (React Query, Tailwind, shadcn/ui)',
+        'Built secure REST APIs with NestJS, Prisma ORM, and JWT authentication',
+        'Achieved unit and integration test coverage with Jest',
+        'Integrated SAP for automated synchronization of clients, invoices, and products',
+        'Automated PDF generation for billing and reports (jsPDF)'
+      ],
+      technologies: ['Next.js', 'NestJS', 'TypeScript', 'Prisma', 'React Query', 'Tailwind', 'Jest']
+    },
+    {
+      type: 'work',
       title: 'Full-Stack Developer',
       company: 'TeraToSoft | Waha Oil Company',
       location: 'Tunisia',
-      period: 'Aug. 2024 – Present',
+      period: 'Aug. 2024 – Oct. 2025',
       description: 'Employee Portal – Full-Stack Development Lead.',
       highlights: [
         'Implemented role-based navigation and permission system for different user types',

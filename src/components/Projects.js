@@ -8,6 +8,26 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
+      title: "ERP System - Digital4all",
+      description: "Complete ERP web application for fleet management, dispatch, CRM, and recovery with SAP integration and automated PDF billing.",
+      image: "/api/placeholder/600/400",
+      technologies: ["Next.js", "NestJS", "TypeScript", "Prisma", "React Query", "Tailwind", "Jest"],
+      features: [
+        "Responsive dashboard and mobile interfaces",
+        "Secure REST APIs with JWT authentication",
+        "SAP integration for clients, invoices, and products",
+        "Automated PDF generation for billing and reports"
+      ],
+      status: "Completed",
+      timeline: "Nov 2025 - Apr 2026",
+      team: "Development team lead",
+      category: "Enterprise",
+      gradient: "from-indigo-500 to-violet-500",
+      demoUrl: "#",
+      githubUrl: "#"
+    },
+    {
+      id: 2,
       title: "Employee Portal - Waha Oil Company",
       description: "A comprehensive employee management system with role-based authentication, medical invoice processing, and bilingual support.",
       image: "/api/placeholder/600/400",
@@ -18,8 +38,8 @@ const Projects = () => {
         "Medical invoice batch processing",
         "Clean Architecture implementation"
       ],
-      status: "In Development",
-      timeline: "Aug 2024 - Present",
+      status: "Completed",
+      timeline: "Aug 2024 - Oct 2025",
       team: "3 developers",
       category: "Enterprise",
       gradient: "from-blue-500 to-cyan-500",
@@ -27,7 +47,7 @@ const Projects = () => {
       githubUrl: "#"
     },
     {
-      id: 2,
+      id: 3,
       title: "Corporate Website - Waha Oil Company",
       description: "Modern corporate website with dynamic content management, tender system, and comprehensive back office.",
       image: "/api/placeholder/600/400",
@@ -47,7 +67,7 @@ const Projects = () => {
       githubUrl: "#"
     },
     {
-      id: 3,
+      id: 4,
       title: "Best Deal - Price Comparison Platform",
       description: "Innovative e-commerce price comparison application with web scraping capabilities and intuitive user interface.",
       image: "/api/placeholder/600/400",
@@ -67,7 +87,7 @@ const Projects = () => {
       githubUrl: "#"
     },
     {
-      id: 4,
+      id: 5,
       title: "BIAL-X ERP Integration",
       description: "Internal web application for optimized management with FitNet ERP integration and PDF processing capabilities.",
       image: "/api/placeholder/600/400",
@@ -117,7 +137,7 @@ const Projects = () => {
       <motion.div
         variants={itemVariants}
         className="relative group"
-        onHoverStart={() => setHoveredProject(project.id)}
+        onHoverStart={() => setHoveredProject(index)}
         onHoverEnd={() => setHoveredProject(null)}
       >
         <div className="card overflow-hidden h-full relative">
@@ -130,12 +150,12 @@ const Projects = () => {
             <div className="absolute inset-0 flex items-center justify-center">
               <motion.div
                 className="text-6xl font-bold text-white/80"
-                animate={hoveredProject === project.id ? {
+                animate={hoveredProject === index ? {
                   scale: [1, 1.1, 1]
                 } : {}}
                 transition={{ duration: 0.4 }}
               >
-                {project.id}
+                {index + 1}
               </motion.div>
             </div>
             
