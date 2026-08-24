@@ -6,6 +6,21 @@ const Experience = () => {
   const experiences = [
     {
       type: 'work',
+      title: 'AI Agents Developer | Verity',
+      company: 'Personal Project',
+      location: 'Remote',
+      period: 'June 2026 – Present',
+      description: 'Capstone of the Google × Kaggle 5-Day AI Agents Intensive: an adaptive fact-checking pipeline that fights misinformation without hallucinating sources or faking confidence scores.',
+      highlights: [
+        'Built TrustLens, a 4-agent pipeline: Router, Scout, Verifier, and Scorer',
+        'Classified inputs (fact-check vs topic monitor) and searched the live web via MCP',
+        'Cross-referenced claims against real sources, with every verdict tracing back to a URL',
+        'Produced a deterministic trust score (0–100) computed by code, never by AI'
+      ],
+      technologies: ['Google ADK', 'Gemini 2.5 Flash', 'MCP', 'FastAPI', 'Next.js']
+    },
+    {
+      type: 'work',
       title: 'Full-Stack Developer | ERP Project',
       company: 'Digital4all',
       location: 'Tunis, Tunisia',

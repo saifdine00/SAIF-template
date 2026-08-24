@@ -8,6 +8,26 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
+      title: "Verity — Adaptive Fact-Checking Pipeline",
+      description: "Capstone from the Google × Kaggle 5-Day AI Agents Intensive: a multi-agent system that fights misinformation without hallucinating sources or faking confidence scores.",
+      image: "/api/placeholder/600/400",
+      technologies: ["Google ADK", "Gemini 2.5 Flash", "MCP", "FastAPI", "Next.js"],
+      features: [
+        "Four specialized agents: Router, Scout, Verifier, and Scorer",
+        "Live web search via Model Context Protocol (MCP)",
+        "Deterministic trust score (0–100) computed by code, never by AI",
+        "Every claim traces back to a real, auditable URL"
+      ],
+      status: "Beta",
+      timeline: "July 2025",
+      team: "Collaborative project",
+      category: "AI Agents",
+      gradient: "from-sky-500 to-indigo-600",
+      demoUrl: "https://lnkd.in/e-94wpXG",
+      githubUrl: "#"
+    },
+    {
+      id: 2,
       title: "ERP System - Digital4all",
       description: "Complete ERP web application for fleet management, dispatch, CRM, and recovery with SAP integration and automated PDF billing.",
       image: "/api/placeholder/600/400",
@@ -27,7 +47,7 @@ const Projects = () => {
       githubUrl: "#"
     },
     {
-      id: 2,
+      id: 3,
       title: "Employee Portal - Waha Oil Company",
       description: "A comprehensive employee management system with role-based authentication, medical invoice processing, and bilingual support.",
       image: "/api/placeholder/600/400",
@@ -47,7 +67,7 @@ const Projects = () => {
       githubUrl: "#"
     },
     {
-      id: 3,
+      id: 4,
       title: "Corporate Website - Waha Oil Company",
       description: "Modern corporate website with dynamic content management, tender system, and comprehensive back office.",
       image: "/api/placeholder/600/400",
@@ -67,7 +87,7 @@ const Projects = () => {
       githubUrl: "#"
     },
     {
-      id: 4,
+      id: 5,
       title: "Best Deal - Price Comparison Platform",
       description: "Innovative e-commerce price comparison application with web scraping capabilities and intuitive user interface.",
       image: "/api/placeholder/600/400",
@@ -87,7 +107,7 @@ const Projects = () => {
       githubUrl: "#"
     },
     {
-      id: 5,
+      id: 6,
       title: "BIAL-X ERP Integration",
       description: "Internal web application for optimized management with FitNet ERP integration and PDF processing capabilities.",
       image: "/api/placeholder/600/400",
@@ -243,6 +263,8 @@ const Projects = () => {
             <div className="flex gap-3">
               <motion.a
                 href={project.demoUrl}
+                target={project.demoUrl !== '#' ? '_blank' : undefined}
+                rel={project.demoUrl !== '#' ? 'noopener noreferrer' : undefined}
                 className="flex-1 flex items-center justify-center gap-2 bg-primary-600 hover:bg-primary-700 text-white py-2 px-4 rounded-lg text-sm font-medium transition-all duration-300 group/btn"
                 whileHover={{ scale: 1.02, y: -1 }}
                 whileTap={{ scale: 0.98 }}
