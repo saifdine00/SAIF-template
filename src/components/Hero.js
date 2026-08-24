@@ -265,8 +265,11 @@ const Hero = () => {
               variants={magneticVariants}
               whileHover="hover"
               whileTap="tap"
-              href="/saif_Eddine_Fatnassi_CV_fr.pdf"
-              download
+              href="/Saif_Eddine_CV_fr.pdf"
+              download="Saif_Eddine_CV_fr.pdf"
+              type="application/pdf"
+              target="_blank"
+              rel="noopener noreferrer"
               className="btn-secondary flex items-center justify-center gap-2 relative overflow-hidden group"
               data-cursor="hover"
               data-cursor-text="Download CV"
